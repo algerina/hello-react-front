@@ -19,7 +19,7 @@ export const getMessage = (payload) => ({
 });
 
 export const getGreeting = () => async (dispatch) => {
-  const response = await fetch('http://127.0.0.1:3000/v1/greeting.json');
+  const response = await fetch('http://127.0.0.1:8000/v1/greeting');
   const data = await response.json();
   dispatch(getMessage(data.message));
 }; 
